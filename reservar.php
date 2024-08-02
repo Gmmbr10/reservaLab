@@ -17,11 +17,11 @@
 
     <?php include_once __DIR__ . "/header.php"; ?>
 
-    <main class="m-auto pv-4">
+    <main class="m-auto pv-4 g-1 flex f-column">
+        
+        <h2 class="center">Reservar laboratório</h2>
 
         <form name="reservar" method="POST" class="form f-column center-grid">
-            
-            <h2>Reservar laboratório</h2>
 
             <section class="input">
                 <label for="">Seu nome:</label>
@@ -73,7 +73,7 @@
             </section>
 
             <p class="bold important">
-                A sua aula é dividida em turmas(A e B)?
+                A sua aula é dividida em turmas ( A e B )?
             </p>
             <section class="input-select">
                 

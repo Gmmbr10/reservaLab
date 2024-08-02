@@ -225,6 +225,7 @@ main>section {
     padding: 1rem;
     background-color: var(--secondary);
     font-weight: bold;
+    font-size: medium;
     text-transform: uppercase;
     cursor: pointer;
     border: 2px solid var(--secondary);
