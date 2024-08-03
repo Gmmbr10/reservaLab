@@ -24,14 +24,15 @@
         <form name="reservar" method="POST" class="form f-column center-grid">
 
             <section class="input">
-                <label for="">Seu nome:</label>
+                <label for="">Nome do professor:</label>
                 <input type="text" name="">
             </section>
             
             <p class="bold important">
                 Matéria de base:
             </p>
-            <section class="input-select">
+
+            <section class="input-select col-3">
 
                 <input type="radio" name="materia" value="comum" id="comum">
                 <label for="comum">
@@ -48,34 +49,48 @@
             </section>
 
             <section class="input">
-                <label for="">Dia de uso:</label>
+                <label for="">Data de uso:</label>
                 <input type="date" name="">
-            </section>
-            <section class="input-checkbox">
-
-                <p class="bold important">
-                    Aulas de uso:
-                </p>
-
-                <?php
-
-                    for ( $limit = 1 ; $limit <= 8 ; $limit++ ) {
-
-                        echo ("
-                            <label>
-                                <input type=\"checkbox\" name=\"class_select\"> ${limit}º Aula
-                            </label>
-                        ");
-
-                    }
-
-                ?>
             </section>
 
             <p class="bold important">
-                A sua aula é dividida em turmas ( A e B )?
+                Aula(s) de uso:
             </p>
-            <section class="input-select">
+
+            <section class="input-checkbox g-1">
+
+                <label>
+                    <input type="checkbox" name="class_select"> 1&deg; Aula ( 07:30 - 08:20 )
+                </label>
+                <label>
+                    <input type="checkbox" name="class_select"> 2&deg; Aula ( 08:20 - 09:10 )
+                </label>
+                <label>
+                    <input type="checkbox" name="class_select"> 3&deg; Aula ( 09:10 - 10:00 )
+                </label>
+                <label>
+                    <input type="checkbox" name="class_select"> 4&deg; Aula ( 10:20 - 11:10 )
+                </label>
+                <label>
+                    <input type="checkbox" name="class_select"> 5&deg; Aula ( 11:10 - 12:00 )
+                </label>
+                <label>
+                    <input type="checkbox" name="class_select"> 6&deg; Aula ( 13:00 - 13:50 )
+                </label>
+                <label>
+                    <input type="checkbox" name="class_select"> 7&deg; Aula ( 13:50 - 14:40 )
+                </label>
+                <label>
+                    <input type="checkbox" name="class_select"> 8&deg; Aula ( 14:40 - 15:30 )
+                </label>
+
+            </section>
+
+            <p class="bold important">
+                A aula será dividida em turmas (A e B)?
+            </p>
+
+            <section class="input-select col-2">
                 
                 <input type="radio" name="turma" value="yes" id="sim">
                 <label for="sim">
