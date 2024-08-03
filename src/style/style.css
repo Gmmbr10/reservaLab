@@ -19,6 +19,7 @@
     --secondary-hover: #f59e0b;
     --black: #222;
     --white: #fff;
+    --gray: #ccc;
 }
 
 body {
@@ -121,13 +122,22 @@ main>section {
 .input {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     border-radius: 12px;
     background-color: var(--primary-hover);
 }
 
 .input label{
     padding: 8px 12px;
+}
+
+input[type="text"],input[type="date"] {
+    padding: 0 0.5rem;
+}
+
+.input-checkbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .input-select {
@@ -150,6 +160,7 @@ main>section {
     border-radius: 12px;
     padding: 1rem;
     display: flex;
+    justify-content: center;
     align-items : center;
 }
 
@@ -177,6 +188,46 @@ main>section {
 .input-select input[type="radio"]:checked + label {
     background-color: var(--secondary);
     color: var(--black);
+    font-weight: bold;
+}
+
+.input-checkbox label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: var(--gray);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.input-checkbox input[type="checkbox"]:before {
+  content: "";
+  position: relative;
+  top: -1px;
+  width: 5px;
+  height: 13px;
+  rotate: 45deg;
+}
+
+.input-checkbox input[type="checkbox"]:checked {
+  background-color: var(--secondary);
+}
+
+.input-checkbox input[type="checkbox"]:checked:before {
+  border: 3px solid var(--white);
+  border-left: none;
+  border-top: none;
+  border-color: var(--primary);
 }
 
 /*.input-select input[type="radio"]:checked + label:before {
@@ -236,6 +287,16 @@ main>section {
 .btn:hover {
     background-color: var(--primary);
     color: var(--white);
+}
+
+.col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 footer {
